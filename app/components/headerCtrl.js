@@ -46,6 +46,16 @@
             $location.path("/");
         };
 
+        $rootScope.getCroppedTripImageUrl = function(url) {
+            try {
+                var arr = url.split('upload/');
+                var croppedUrl = arr[0] + 'upload/c_crop,h_440,w_440/' + arr[1];
+            } catch (e) {
+                console.log(e);
+            }
+            return croppedUrl;
+        };
+
         //Main app
         //tourService.getTravelStyles(function (data) {
         //    $scope.$apply(function () {

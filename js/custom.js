@@ -211,9 +211,9 @@ $(document).ready(
    var footerHeight = $('#main-footer').height();
    var footerTop = $('#main-footer').position().top + footerHeight;
    
-   if (footerTop < docHeight) {
-    $('#main-footer').css('margin-top', (docHeight - footerTop) + 'px');
-   }
+//   if (footerTop < docHeight) {
+//    $('#main-footer').css('margin-top', (docHeight - footerTop) + 'px');
+//   }
     }
 
 
@@ -335,7 +335,7 @@ if ($('#map-canvas').length) {
 
 
 $('.card-select > li').click(function() {
-    self = this;
+    var self = this;
     $(self).addClass('card-item-selected');
     $(self).siblings('li').removeClass('card-item-selected');
     $('.form-group-cc-number input').click(function() {
