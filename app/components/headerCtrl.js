@@ -46,10 +46,13 @@
             $location.path("/");
         };
 
-        $rootScope.getCroppedTripImageUrl = function(url) {
+        $rootScope.getCroppedTripImageUrl = function(url, transString) {
             try {
+                if(!transString) {
+                    transString = 'upload/c_crop,h_440,w_440/';
+                }
                 var arr = url.split('upload/');
-                var croppedUrl = arr[0] + 'upload/c_crop,h_440,w_440/' + arr[1];
+                var croppedUrl = arr[0] + transString + arr[1];
             } catch (e) {
                 console.log(e);
             }
