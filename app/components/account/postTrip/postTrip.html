@@ -1,7 +1,33 @@
 <script type="text/javascript">
 Dropzone.autoDiscover = false;
 </script>
-<div profile-wrap files="userObj"></div>
+<!--<div profile-wrap files="userObj"></div>-->
+<div class="profile-header-background">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col-md-4 my-trip">
+            </div>
+            <div class="col-md-4 profile-overview">
+                <div class="row no-margin">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <img class="profile-picture img-circle" ng-src="{{userObj.facebook_profile.picture.data.url}}" alt="Profile Picture" width="50" height="50">
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row no-margin">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                        {{userObj.facebook_profile.name}}
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <div class="col-md-4 locaion">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="content-wrap" id="content">
 <div class="site-content container">
 <form name="postTripForm" ng-submit="postTrip()" role="form">
@@ -10,11 +36,11 @@ Dropzone.autoDiscover = false;
 				<!--<div id="trip_photo" class="photo-preview" style="cursor: pointer;background-image:url(/img/icons/uploadphoto.png);"></div>
 					<a href="" class="uploader">
 					<span class="fa fa-upload"></span>
-					<input  id="id_photo" name="photo" type="file" class="element-file" data-image="trip_photo" onchange="angular.element(this).scope().uploadMainImage(this.files)"> 
-					</a>-->                
+					<input  id="id_photo" name="photo" type="file" class="element-file" data-image="trip_photo" onchange="angular.element(this).scope().uploadMainImage(this.files)">
+					</a>-->
                 <div  class="photo-preview needsclick dz-clickable" dropzone="mainImageDropzoneConfig" style="cursor: pointer;background-image:url(/img/icons/uploadphoto.png);">
                     <div class="dz-message needsclick"> </div>
-                    <span class="fa fa-upload"></span>    
+                    <span class="fa fa-upload"></span>
                 </div>
 			</div>
 			<div class="editor-title" ng-class="{ 'has-error': postTripForm.title.$dirty && postTripForm.title.$error.required }">
