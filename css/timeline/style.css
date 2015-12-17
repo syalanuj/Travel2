@@ -472,3 +472,7 @@ div.toolbar-wrap.tags-bar {
 .title-tag {
     font-weight: 600;
 }
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+}

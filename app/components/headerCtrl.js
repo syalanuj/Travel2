@@ -13,6 +13,8 @@
         $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
 
         $rootScope.loginWithFacebook = function () {
+            if(!$rootScope.fbInit) return;
+
             Parse.FacebookUtils.logIn(null, {
                 success: function (user) {
                     if (!user.existed()) {
@@ -35,7 +37,7 @@
                     $location.path("/");
                 },
                 error: function (user, error) {
-                    alert("Cancelled");
+                    console.log("Cancelled");
                 }
             });
         };

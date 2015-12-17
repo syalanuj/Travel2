@@ -2136,9 +2136,9 @@ body {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-img {
-  width: 100%;
-}
+/*img {*/
+  /*width: 100%;*/
+/*}*/
 img.origin {
   width: auto;
 }
