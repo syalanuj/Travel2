@@ -30,19 +30,25 @@ Dropzone.autoDiscover = false;
 </div>
 <div class="content-wrap" id="content">
 <div class="site-content container">
+    <h3 style="text-align: center;margin-bottom: 1em">New Trip</h3>
 <form name="postTripForm" ng-submit="postTrip()" role="form">
+    <div class="editor-cover-image form-fields element-file" dropzone="mainImageDropzoneConfig" data-image="trip_photo" onchange="angular.element(this).scope().uploadMainImage(this.files)">
+        <div class="cover-message dz-message">
+            <a class="uploader needsclick dz-clickable">UPLOAD</a>
+            <span>COVER IMAGE</span>
+        </div>
+
+        <!--<div id="trip_photo" class="photo-preview" style="cursor: pointer;background-image:url(/img/icons/uploadphoto.png);"></div>
+            <a href="" class="uploader">
+            <span class="fa fa-upload"></span>
+            <input  id="id_photo" name="photo" type="file" class="element-file" data-image="trip_photo" onchange="angular.element(this).scope().uploadMainImage(this.files)">
+            </a>-->
+        <!--<div  class="photo-preview needsclick dz-clickable" dropzone="mainImageDropzoneConfig" style="cursor: pointer;background-image:url(/img/icons/uploadphoto.png);">-->
+        <!--<div class="dz-message needsclick"> </div>-->
+        <!--<span class="fa fa-upload"></span>-->
+        <!--</div>-->
+    </div>
     <div class="editor-header">
-			<div class="editor-image">
-				<!--<div id="trip_photo" class="photo-preview" style="cursor: pointer;background-image:url(/img/icons/uploadphoto.png);"></div>
-					<a href="" class="uploader">
-					<span class="fa fa-upload"></span>
-					<input  id="id_photo" name="photo" type="file" class="element-file" data-image="trip_photo" onchange="angular.element(this).scope().uploadMainImage(this.files)">
-					</a>-->
-                <div  class="photo-preview needsclick dz-clickable" dropzone="mainImageDropzoneConfig" style="cursor: pointer;background-image:url(/img/icons/uploadphoto.png);">
-                    <div class="dz-message needsclick"> </div>
-                    <span class="fa fa-upload"></span>
-                </div>
-			</div>
 			<div class="editor-title" ng-class="{ 'has-error': postTripForm.title.$dirty && postTripForm.title.$error.required }">
 				<input ng-model="newTrip.title" maxlength="100" name="title" placeholder="Title" type="text" required>
                 <span ng-show="postTripForm.title.$dirty && postTripForm.title.$error.required" class="help-block">Title is required.</span>

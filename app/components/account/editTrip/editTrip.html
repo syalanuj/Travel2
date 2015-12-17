@@ -6,16 +6,16 @@ Dropzone.autoDiscover = false;
 <div class="site-content container">
 <form name="postTripForm" ng-submit="updateTrip()" role="form">
     <div class="editor-header">
-			<div class="editor-image">
+			<div class="editor-cover-image">
 				<!--<div id="trip_photo" class="photo-preview" style="background-image:url(/media/cache/99/44/99445a2f61c051a29e09ba7cbc2fd264.jpg)"></div>
 					<a href="" class="uploader">
 					<span class="fa fa-upload"></span>
 					<input ng-model="newTrip.main_image.image_url" id="id_photo" name="photo" type="file" class="element-file" data-image="trip_photo">
 					</a>-->
-                <div  class="photo-preview needsclick dz-clickable" dropzone="mainImageDropzoneConfig" style="cursor: pointer;">
-                    <div class="dz-message needsclick"> </div>
-                    <span class="fa fa-upload"></span>    <!--main-image-fix-->
-                   </div>
+                <!--<div  class="photo-preview needsclick dz-clickable" dropzone="mainImageDropzoneConfig" style="cursor: pointer;">-->
+                    <!--<div class="dz-message needsclick"> </div>-->
+                    <!--<span class="fa fa-upload"></span>    &lt;!&ndash;main-image-fix&ndash;&gt;-->
+                   <!--</div>-->
 			</div>
 			<div class="editor-title" ng-class="{ 'has-error': postTripForm.title.$dirty && postTripForm.title.$error.required }">
 				<input ng-model="newTrip.title" maxlength="100" name="title" placeholder="Title" type="text" required>

@@ -476,3 +476,47 @@ div.toolbar-wrap.tags-bar {
 .nav > li > a:hover, .nav > li > a:focus {
     background-color: transparent;
 }
+
+.editor-cover-image {
+    /*display: table-cell;*/
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background: #ffffff;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #dfdfdf;
+    padding: .4em 9px;
+    outline: 0;
+    color: #444;
+    min-height: 4.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+div.cover-message {
+    margin-top: 0.4em;
+    opacity: 0.8;
+}
+
+a.uploader {
+    cursor: pointer;
+    color: #ff682e;
+    text-decoration: underline;
+}
+
+.dz-started .dz-message {
+    display: none;
+}
+
+.editor-cover-image .dz-details,.dz-success-mark,.dz-error-mark,.dz-error-message,.dz-progress {
+    display: none;
+}
+
+.editor-cover-image .dz-preview {
+    max-height: 100%;
+    overflow: hidden;
+}
