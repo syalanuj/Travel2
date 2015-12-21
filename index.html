@@ -143,7 +143,7 @@
 					<a href ="#/" class="col-md-2 no-padding site-name">
 						campture
 					</a>
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
@@ -158,13 +158,25 @@
 								<li><a href="#">Timeline</a></li>
 								<li><a href="#">Tags</a></li>
 								<li><a href="#">Profiles</a></li>
+                                <!--<li>-->
+                                    <!--<div class="col-md-3">-->
+                                        <!--<a class="my-feed-nav" ng-show="userObj" ng-href="#/account/profile/{{userObj.objectId}}">-->
+                                            <!--<img src="img/icons/myfeed.png" alt="My Feed" style="width: 86%;">-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                <!--</li>-->
 							</ul>
 						</div>
 					</div>
-					
-					<div  class="col-md-2 myfeed">
-						<a ng-show="userObj" ng-href="#/account/profile/{{userObj.objectId}}"><img src="img/icons/myfeed.png" alt="My Feed" style="width: 86%;"></a>
-					</div>
+                    <div class="col-md-2 my-feed-nav">
+                        <a ng-show="userObj" ng-href="#/account/profile/{{userObj.objectId}}">
+                            <img src="img/icons/myfeed.png" alt="My Feed" style="width: 86%;">
+                        </a>
+                    </div>
+					<!---->
+					<!--<div  class="col-md-2 myfeed">-->
+						<!--<a ng-show="userObj" ng-href="#/account/profile/{{userObj.objectId}}"><img src="img/icons/myfeed.png" alt="My Feed" style="width: 86%;"></a>-->
+					<!--</div>-->
 
 					<div ng-show="userObj == undefined" class="col-md-3 profile">
                         <a   ng-click ="loginWithFacebook()" class="button facebook"><span class="fa fa-facebook-square medium"></span> Sign in via Facebook</a>                        						
